@@ -4,5 +4,7 @@
              xmlns:local="clr-namespace:IMAD_Logical_Model"
              x:Class="IMAD_Logical_Model.App">
     <Application.Resources>
+        <Color x:Key="Inactive">#444444</Color>
+        <Color x:Key="Active">#22aaaa</Color>
     </Application.Resources>
 </Application>

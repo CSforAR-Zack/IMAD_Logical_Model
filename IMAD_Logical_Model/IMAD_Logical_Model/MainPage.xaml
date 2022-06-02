@@ -9,19 +9,37 @@
             Padding="30,0" 
             VerticalOptions="Center">
 
-            <HorizontalStackLayout Spacing="10">
-                <Button x:Name="leftButton" BackgroundColor="Yellow" />
+            <Label Text="Demonstrating Logical Operators"
+                   HorizontalOptions="Center"/>
+            
+            <HorizontalStackLayout Spacing="10"
+                                   HorizontalOptions="Center">
+                <Button x:Name="leftButton"
+                        Clicked="ChangeColor"
+                        Text="Inactive"
+                        BackgroundColor="{DynamicResource Inactive}"/>
                 <Picker x:Name="operatorPicker" 
-                        Title="Select Operation">
+                        Title="Select Operation"
+                        SelectedIndexChanged="ChangeColor">
                     <Picker.Items>
                         <x:String>AND</x:String>
                         <x:String>OR</x:String>
                         <x:String>XOR</x:String>
                     </Picker.Items>
                 </Picker>
-                <Button x:Name="rightButton" BackgroundColor="Yellow" />
+                <Button x:Name="rightButton"
+                        Clicked="ChangeColor"
+                        Text="Inactive"
+                        BackgroundColor="{DynamicResource Inactive}" />
             </HorizontalStackLayout>
-            <Label>
+            
+            <Label x:Name="resultLabel"
+                   Text="False"
+                   TextColor="White"
+                   FontSize="40"
+                   BackgroundColor="{DynamicResource Inactive}"
+                   WidthRequest="200"
+                   HorizontalTextAlignment="Center"/>
 
         </VerticalStackLayout>
     </ScrollView>
