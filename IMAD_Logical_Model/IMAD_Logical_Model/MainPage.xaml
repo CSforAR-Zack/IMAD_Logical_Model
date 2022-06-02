@@ -3,23 +3,26 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="IMAD_Logical_Model.MainPage">
 			 
-    <ScrollView>
+    <ScrollView BackgroundColor="{StaticResource Primary}">
         <VerticalStackLayout 
             Spacing="25" 
             Padding="30,0" 
             VerticalOptions="Center">
 
             <Label Text="Demonstrating Logical Operators"
+                   TextColor="{DynamicResource Secondary}"
                    HorizontalOptions="Center"/>
             
             <HorizontalStackLayout Spacing="10"
                                    HorizontalOptions="Center">
                 <Button x:Name="leftButton"
                         Clicked="ChangeColor"
-                        Text="Inactive"
+                        Text="False"
                         BackgroundColor="{DynamicResource Inactive}"/>
                 <Picker x:Name="operatorPicker" 
                         Title="Select Operation"
+                        TitleColor="{DynamicResource Secondary}"
+                        TextColor="{DynamicResource Secondary}"
                         SelectedIndexChanged="ChangeColor">
                     <Picker.Items>
                         <x:String>AND</x:String>
@@ -29,7 +32,7 @@
                 </Picker>
                 <Button x:Name="rightButton"
                         Clicked="ChangeColor"
-                        Text="Inactive"
+                        Text="False"
                         BackgroundColor="{DynamicResource Inactive}" />
             </HorizontalStackLayout>
             

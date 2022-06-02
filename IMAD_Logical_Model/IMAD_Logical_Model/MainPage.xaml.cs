@@ -16,15 +16,15 @@ public partial class MainPage : ContentPage
         {
             Button button = (Button)sender;
 
-            if (button.Text == "Active")
+            if (button.Text == "True")
             {
                 button.SetDynamicResource(BackgroundColorProperty, "Inactive");
-                button.Text = "Inactive";
+                button.Text = "False";
             }
             else
             {
                 button.SetDynamicResource(BackgroundColorProperty, "Active");
-                button.Text = "Active";
+                button.Text = "True";
             }
         }
         catch (InvalidCastException e)
@@ -38,11 +38,11 @@ public partial class MainPage : ContentPage
         string selectedOperator = operatorPicker.SelectedItem.ToString();
 
         if (selectedOperator == "AND")
-            resultLabel.Text = (leftButton.Text == "Active" && rightButton.Text == "Active").ToString();
+            resultLabel.Text = (leftButton.Text == "True" && rightButton.Text == "True").ToString();
         else if (selectedOperator == "OR")
-            resultLabel.Text = (leftButton.Text == "Active" || rightButton.Text == "Active").ToString();
+            resultLabel.Text = (leftButton.Text == "True" || rightButton.Text == "True").ToString();
         else if (selectedOperator == "XOR")
-            resultLabel.Text = (leftButton.Text == "Active" ^ rightButton.Text == "Active").ToString();
+            resultLabel.Text = (leftButton.Text == "True" ^ rightButton.Text == "True").ToString();
 
         if (resultLabel.Text == "True")
             resultLabel.SetDynamicResource(BackgroundColorProperty, "Active");
